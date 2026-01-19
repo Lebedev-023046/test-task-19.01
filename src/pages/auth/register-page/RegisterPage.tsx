@@ -1,9 +1,5 @@
-import styles from './RegisterPage.module.css'
+import { RegisterForm } from '@/features/auth/register/ui/RegisterForm'
 
 export function RegisterPage() {
-	return (
-		<div className={styles.wrapper}>
-			<div className={styles.main}>RegisterPage works!</div>
-		</div>
-	)
+	return <RegisterForm />
 }
