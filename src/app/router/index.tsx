@@ -1,12 +1,11 @@
+import { RegisterPage } from '@/pages/auth/register-page'
+import { NotFoundPage } from '@/pages/not-found-page'
 import { ProductsListPage } from '@/pages/products-list-page'
 import { ROUTES } from '@/shared/config/routes'
 import { createBrowserRouter } from 'react-router-dom'
-
-import { RegisterPage } from '@/pages/auth/register-page'
-import { NotFoundPage } from '@/pages/not-found-page'
-import { GuestLayout } from '../layout/GuestLayout'
-import { ProtectedLayout } from '../layout/ProtectedLayout'
 import { AppLayout } from '../layout/app-layout'
+import { GuestLayout } from '../layout/guest-layout'
+import { ProtectedLayout } from '../layout/ProtectedLayout'
 
 // если бандл будет становаться большим, то лучше подгружать страницы через React.lazy
 
