@@ -1,0 +1,40 @@
+/* Styles for BaseTextField */
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-weight: 300;
+  text-transform: capitalize;
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  box-shadow: var(--shadow-common);
+  border-radius: var(--rounded-sm);
+}
+
+.input {
+  flex: 1 1 auto;
+  padding: 0;
+  outline: none;
+  border: none;
+  font-size: 1.6rem;
+}
+
+.leftIcon,
+.rightIcon {
+  display: flex;
+  align-items: center;
+}
+
+.input::placeholder {
+  font-size: 1.6rem;
+  color: var(--text-color-secondary);
+}
