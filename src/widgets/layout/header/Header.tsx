@@ -1,3 +1,4 @@
+import { LogoutButton } from '@/features/auth/logout/ui/LogoutButton'
 import { Link } from 'react-router-dom'
 import styles from './header.module.css'
 
@@ -10,7 +11,9 @@ export function Header() {
 						Some App
 					</Link>
 				</div>
-				<div className={styles.controls}>{/* <LogoutButton /> */}</div>
+				<div className={styles.controls}>
+					<LogoutButton />
+				</div>
 			</div>
 		</header>
 	)
