@@ -1,11 +1,12 @@
 import { AuthFormShell } from '@/shared/ui/auth-form-shell'
 
+import { ErrorMessage } from '@/shared/ui/form-fields/error-message'
 import { InputField } from '@/shared/ui/form-fields/RHF/input-field'
-import { RegisterButton } from '../../controls/RegisterButton'
-import { useRegisterForm } from '../model/useRegisterForm'
+import { LoginButton } from '../../controls/LoginButton'
+import { useLoginForm } from '../model/useLoginForm'
 
-export function RegisterForm() {
-	const { control, onSubmit } = useRegisterForm()
+export function LoginForm() {
+	const { control, hasError, errorText, onSubmit } = useLoginForm()
 
 	return (
 		<AuthFormShell
@@ -13,7 +14,7 @@ export function RegisterForm() {
 			onSubmit={onSubmit}
 			controls={
 				<>
-					<RegisterButton isPending={false} />
+					<LoginButton isPending={false} />
 				</>
 			}
 		>
@@ -30,6 +31,8 @@ export function RegisterForm() {
 				autoComplete='current-password'
 				control={control}
 			/>
+
+			<ErrorMessage isError={hasError} message={errorText} />
 		</AuthFormShell>
 	)
 }

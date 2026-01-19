@@ -1,4 +1,4 @@
-import { RegisterPage } from '@/pages/auth/register-page'
+import { LoginPage } from '@/pages/auth/login-page'
 import { NotFoundPage } from '@/pages/not-found-page'
 import { ProductsListPage } from '@/pages/products-list-page'
 import { ROUTES } from '@/shared/config/routes'
@@ -29,8 +29,8 @@ export const router = createBrowserRouter([
 		element: <GuestLayout />,
 		children: [
 			{
-				path: ROUTES.auth.register(),
-				element: <RegisterPage />
+				path: ROUTES.auth.login(),
+				element: <LoginPage />
 			}
 		]
 	},

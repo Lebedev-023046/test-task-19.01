@@ -1,6 +1,6 @@
 export const ROUTES = {
 	auth: {
-		register: () => '/register'
+		login: () => '/login'
 	},
 	productsList: () => '/',
 	productDetails: (id: string) => `/products/${id}`
