@@ -12,18 +12,16 @@ interface Props {
 }
 
 export function EditProductForm({ product, onClose }: Props) {
-	const { control, onSubmit } = useEditProductForm({ product })
-
-	const handleSubmit = () => {
-		onSubmit()
-		onClose()
-	}
+	const { control, onSubmit } = useEditProductForm({
+		product,
+		onSuccess: onClose
+	})
 
 	return (
 		<div className={styles.wrapper}>
 			<div className={styles.main}>
 				<h2>Edit Product</h2>
-				<form className={styles.form} onSubmit={handleSubmit}>
+				<form className={styles.form} onSubmit={onSubmit}>
 					<div className={styles.formFields}>
 						<InputField
 							name='title'

@@ -10,9 +10,10 @@ import {
 
 interface Props {
 	product: Product
+	onSuccess?: () => void
 }
 
-export function useEditProductForm({ product }: Props) {
+export function useEditProductForm({ product, onSuccess }: Props) {
 	const { updateProduct } = useProducts()
 
 	const defaultValues = {
@@ -28,6 +29,8 @@ export function useEditProductForm({ product }: Props) {
 	})
 
 	const onSubmit = handleSubmit(async values => {
+		console.log({ values })
+
 		try {
 			const payload = {
 				id: product.id,
@@ -39,6 +42,7 @@ export function useEditProductForm({ product }: Props) {
 			updateProduct(payload)
 			reset()
 
+			onSuccess?.()
 			toast.success('Product updated successfully')
 		} catch {
 			toast.error('Failed to update product')
