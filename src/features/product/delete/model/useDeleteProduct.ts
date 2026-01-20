@@ -15,7 +15,7 @@ export function useDeleteProduct() {
 		try {
 			await sleep(1000)
 			deleteProduct(id)
-			toast.success('Product created')
+			toast.success('Product deleted')
 		} catch (error) {
 			setError(error instanceof Error ? error : new Error(String(error)))
 			toast.error('Something went wrong')

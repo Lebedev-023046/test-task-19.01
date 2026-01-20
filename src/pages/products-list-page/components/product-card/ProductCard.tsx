@@ -1,6 +1,8 @@
 import type { Product } from '@/entities/product/api/types'
 import { useDeleteProduct } from '@/features/product/delete/model/useDeleteProduct'
+import { ROUTES } from '@/shared/config/routes'
 import { Button } from '@/shared/ui/button'
+import { Link } from 'react-router-dom'
 import styles from './ProductCard.module.css'
 
 export function ProductCard({ product }: { product: Product }) {
@@ -27,7 +29,7 @@ export function ProductCard({ product }: { product: Product }) {
 						Delete
 					</Button>
 					<Button align='center' disabled={isLoading}>
-						Go To Product
+						<Link to={ROUTES.productDetails(product.id)}>Go To Product</Link>
 					</Button>
 				</div>
 			</div>

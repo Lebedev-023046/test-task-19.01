@@ -10,7 +10,7 @@ import {
 export function useCreateProductForm() {
 	const { createProduct } = useProducts()
 
-	const { control, handleSubmit } = useForm<AddProductFormInput>({
+	const { control, handleSubmit, reset } = useForm<AddProductFormInput>({
 		resolver: zodResolver(addProductSchema),
 		defaultValues: {
 			title: '',
@@ -26,9 +26,10 @@ export function useCreateProductForm() {
 			const payload = {
 				...values,
 				price: Number(values.price),
-				image: 'images/product-image.webp'
+				image: '/images/product-image.webp'
 			}
 			createProduct(payload)
+			reset()
 
 			toast.success('Product created successfully')
 		} catch {

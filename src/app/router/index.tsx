@@ -1,5 +1,6 @@
 import { LoginPage } from '@/pages/auth/login-page'
 import { NotFoundPage } from '@/pages/not-found-page'
+import { ProductDetailsPage } from '@/pages/product-details-page'
 import { ProductsListPage } from '@/pages/products-list-page'
 import { ROUTES } from '@/shared/config/routes'
 import { createBrowserRouter } from 'react-router-dom'
@@ -20,6 +21,10 @@ export const router = createBrowserRouter([
 						index: true,
 						path: ROUTES.productsList(),
 						element: <ProductsListPage />
+					},
+					{
+						path: ROUTES.productDetails(':productId'),
+						element: <ProductDetailsPage />
 					}
 				]
 			}
