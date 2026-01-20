@@ -8,7 +8,7 @@ export function Header() {
 			<div className={styles.header}>
 				<div className={styles.logo}>
 					<Link className={styles.title} to='/'>
-						Some App
+						Test App
 					</Link>
 				</div>
 				<div className={styles.controls}>
