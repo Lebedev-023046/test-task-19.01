@@ -15,7 +15,7 @@ export const authRepo = {
 	},
 	logout() {
 		try {
-			localStorage.removeItem('user')
+			localStorage.clear()
 		} catch (error) {
 			throw error
 		}
