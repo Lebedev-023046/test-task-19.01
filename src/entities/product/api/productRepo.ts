@@ -1,4 +1,6 @@
-import type { Products } from './types'
+import type { CreateProductPayload, Product, Products } from './types'
+
+const LS_KEY = 'products'
 
 export const productRepo = {
 	getLSProducts(): Products {
@@ -25,5 +27,28 @@ export const productRepo = {
 		const dbProducts = await productRepo.getDBProducts()
 		localStorage.setItem('products', JSON.stringify(dbProducts))
 		return dbProducts
+	},
+
+	setLSProducts(products: Products): void {
+		try {
+			localStorage.setItem(LS_KEY, JSON.stringify(products))
+		} catch {}
+	},
+
+	createProduct(payload: CreateProductPayload) {
+		const stored = productRepo.getLSProducts()
+
+		const newProduct: Product = {
+			id: crypto.randomUUID(),
+			...payload
+		}
+
+		const updated: Products = {
+			products: [newProduct, ...stored.products]
+		}
+
+		productRepo.setLSProducts(updated)
+
+		return newProduct
 	}
 }
