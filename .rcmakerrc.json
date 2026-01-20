@@ -1,0 +1,21 @@
+{
+	"useTypeScript": true,
+	"defaultTemplate": "import styles from './${componentName}.module.css';\n\nexport function ${componentName}() {\n  return (\n    <div className={styles.wrapper}>\n      <div className={styles.main}>${componentName} works!</div>\n    </div>\n  );\n}",
+
+	"folderNameStyle": "kebab-case",
+	"fileNameStyle": "PascalCase",
+
+	"createStyleFile": true,
+	"styleFileNameStyle": "PascalCase",
+	"styleExtension": "module.css",
+
+	"generateIndexFile": true,
+	"indexInComponentFolder": true,
+	"indexTemplate": "export { ${componentName} } from './${componentName}';\n",
+
+	"generateTypesFile": false,
+	"generateTestFile": false,
+
+	"typesTemplate": "export interface ${componentName}Props {\n}\n",
+	"testTemplate": "import { render } from '@testing-library/react';\nimport ${componentName} from './${componentFolderName}/${componentFileName}';\n\ndescribe('${componentName}', () => {\n  it('renders correctly', () => {\n    render(<${componentName} />);\n  });\n});"
+}

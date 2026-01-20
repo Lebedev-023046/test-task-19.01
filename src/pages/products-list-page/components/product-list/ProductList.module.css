@@ -1,0 +1,14 @@
+/* Styles for ProductList */
+
+.empty {
+	text-align: center;
+	margin-top: 1.5rem;
+	font-size: 3rem;
+	color: var(--text-color-primary);
+}
+
+.list {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+	gap: 3rem;
+}

@@ -1,0 +1,52 @@
+/* Styles for ProductCard */
+
+.card {
+	display: flex;
+	flex-direction: column;
+	gap: 2.5rem;
+	padding: 2rem;
+	border-radius: var(--rounded-md);
+	background-color: var(--bg-color-primary);
+}
+
+.header {
+	display: flex;
+	gap: 2rem;
+}
+
+.image {
+	width: min(30%, 30rem);
+	aspect-ratio: 1;
+	object-fit: cover;
+	box-shadow: var(--shadow-common);
+	border-radius: var(--rounded-md);
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 2rem;
+}
+
+.title {
+	font-size: 4rem;
+	font-weight: 600;
+}
+
+.description {
+	font-size: 2rem;
+	color: var(--text-color-secondary);
+}
+
+.price {
+	font-size: 2rem;
+	font-weight: 600;
+	color: var(--bg-color-secondary);
+}
+
+.controls {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+}

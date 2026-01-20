@@ -1,0 +1,6 @@
+/* Styles for DeleteProductButton */
+
+.delete {
+	color: var(--bg-color-primary);
+	background-color: var(--error);
+}
