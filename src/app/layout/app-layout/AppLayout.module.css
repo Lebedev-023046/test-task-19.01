@@ -5,3 +5,13 @@
 	max-width: 95%;
 	margin: 2.5rem auto;
 }
+
+.main {
+	display: flex;
+	flex-direction: column;
+	gap: 2.5rem;
+	font-size: 1.6rem;
+	flex: 1 1 auto;
+	min-height: 0;
+	margin: 8rem 0;
+}

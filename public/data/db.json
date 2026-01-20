@@ -1,0 +1,39 @@
+{
+	"products": [
+		{
+			"id": "1",
+			"title": "Wireless Headphones",
+			"description": "Over-ear wireless headphones with active noise cancellation and 30 hours of battery life.",
+			"price": 129.99,
+			"image": "../images/product-image.webp"
+		},
+		{
+			"id": "2",
+			"title": "Mechanical Keyboard",
+			"description": "Compact mechanical keyboard with tactile switches and customizable RGB backlight.",
+			"price": 89.5,
+			"image": "../images/product-image.webp"
+		},
+		{
+			"id": "3",
+			"title": "Smart Watch",
+			"description": "Water-resistant smart watch with heart rate monitor, GPS, and sleep tracking.",
+			"price": 149.0,
+			"image": "../images/product-image.webp"
+		},
+		{
+			"id": "4",
+			"title": "USB-C Hub",
+			"description": "7-in-1 USB-C hub with HDMI, USB 3.0 ports, SD card reader, and power delivery.",
+			"price": 39.99,
+			"image": "../images/product-image.webp"
+		},
+		{
+			"id": "5",
+			"title": "Speaker",
+			"description": "Compact Bluetooth speaker with deep bass, 12 hours of playtime, and waterproof design.",
+			"price": 59.0,
+			"image": "../images/product-image.webp"
+		}
+	]
+}
