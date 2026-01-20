@@ -1,9 +1,9 @@
 import { useProducts } from '@/entities/product/model/useProducts'
-import { ProductForm } from '@/features/product/create/ui/product-form'
+import { CreateProductForm } from '@/features/product/create/ui/create-product-form'
 import { ErrorFallback } from '@/shared/ui/error-boundary/fallback'
 import { PageLoader } from '@/shared/ui/page-loader'
 import styles from './ProductsListPage.module.css'
-import { ProductCard } from './components/product-card'
+import { ProductList } from './components/product-list'
 
 export function ProductsListPage() {
 	const { products, isLoading, error } = useProducts()
@@ -14,12 +14,8 @@ export function ProductsListPage() {
 	return (
 		<section className={styles.wrapper}>
 			<div className={styles.main}>
-				<ProductForm />
-				<div className={styles.list}>
-					{products.map(product => (
-						<ProductCard key={product.id} product={product} />
-					))}
-				</div>
+				<CreateProductForm />
+				<ProductList products={products} />
 			</div>
 		</section>
 	)

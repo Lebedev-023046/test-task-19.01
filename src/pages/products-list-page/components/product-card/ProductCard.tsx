@@ -1,5 +1,6 @@
 import type { Product } from '@/entities/product/api/types'
 import { useDeleteProduct } from '@/features/product/delete/model/useDeleteProduct'
+import { DeleteProductButton } from '@/features/product/delete/ui/delete-product-button'
 import { ROUTES } from '@/shared/config/routes'
 import { Button } from '@/shared/ui/button'
 import { Link } from 'react-router-dom'
@@ -20,14 +21,19 @@ export function ProductCard({ product }: { product: Product }) {
 					<p className={styles.description}>{product.description}</p>
 				</div>
 				<div className={styles.footer}>
-					<Button
+					{/* <Button
 						align='center'
 						variant='outlined'
 						onClick={() => deleteProduct(product.id)}
 						disabled={isLoading}
 					>
 						Delete
-					</Button>
+					</Button> */}
+					<DeleteProductButton
+						productId={product.id}
+						isLoading={isLoading}
+						onDelete={deleteProduct}
+					/>
 					<Button align='center' disabled={isLoading}>
 						<Link to={ROUTES.productDetails(product.id)}>Go To Product</Link>
 					</Button>
