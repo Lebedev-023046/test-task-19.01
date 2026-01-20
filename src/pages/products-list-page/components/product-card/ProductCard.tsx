@@ -1,8 +1,11 @@
 import type { Product } from '@/entities/product/api/types'
+import { useDeleteProduct } from '@/features/product/delete/model/useDeleteProduct'
 import { Button } from '@/shared/ui/button'
 import styles from './ProductCard.module.css'
 
 export function ProductCard({ product }: { product: Product }) {
+	const { mutation: deleteProduct, isLoading } = useDeleteProduct()
+
 	return (
 		<div className={styles.wrapper}>
 			<img src={product.image} alt='product-image' />
@@ -15,10 +18,17 @@ export function ProductCard({ product }: { product: Product }) {
 					<p className={styles.description}>{product.description}</p>
 				</div>
 				<div className={styles.footer}>
-					<Button align='center' variant='outlined'>
+					<Button
+						align='center'
+						variant='outlined'
+						onClick={() => deleteProduct(product.id)}
+						disabled={isLoading}
+					>
 						Delete
 					</Button>
-					<Button align='center'>Go To Product</Button>
+					<Button align='center' disabled={isLoading}>
+						Go To Product
+					</Button>
 				</div>
 			</div>
 		</div>

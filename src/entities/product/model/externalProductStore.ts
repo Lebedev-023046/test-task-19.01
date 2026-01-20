@@ -19,9 +19,13 @@ export const productStore = {
 
 	createProduct(payload: Omit<Product, 'id'>) {
 		productRepo.createProduct(payload)
-
 		const nextSnapshot = productRepo.getLSProducts()
+		store.setSnapshot(nextSnapshot)
+	},
 
+	deleteProduct(id: string) {
+		productRepo.deleteProduct(id)
+		const nextSnapshot = productRepo.getLSProducts()
 		store.setSnapshot(nextSnapshot)
 	}
 }

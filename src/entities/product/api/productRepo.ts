@@ -50,5 +50,15 @@ export const productRepo = {
 		productRepo.setLSProducts(updated)
 
 		return newProduct
+	},
+
+	deleteProduct(id: string): string {
+		const stored = productRepo.getLSProducts()
+		const updated: Products = {
+			products: stored.products.filter(product => product.id !== id)
+		}
+		productRepo.setLSProducts(updated)
+
+		return id
 	}
 }
