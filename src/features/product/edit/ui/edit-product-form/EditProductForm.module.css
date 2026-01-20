@@ -1,0 +1,35 @@
+.wrapper {
+	padding: 3rem;
+	border-radius: var(--rounded-md);
+	background-color: var(--bg-color-primary);
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+	font-size: 1.6rem;
+}
+
+.formFields {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+	width: 100%;
+	flex-grow: 1;
+}
+
+.formFields > div {
+	flex: 1 1 auto;
+}
+
+.controls {
+	display: flex;
+	gap: 1rem;
+}

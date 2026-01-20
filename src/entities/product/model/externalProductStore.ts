@@ -23,6 +23,12 @@ export const productStore = {
 		store.setSnapshot(nextSnapshot)
 	},
 
+	updateProduct(payload: Product) {
+		productRepo.updateProduct(payload)
+		const nextSnapshot = productRepo.getLSProducts()
+		store.setSnapshot(nextSnapshot)
+	},
+
 	deleteProduct(id: string) {
 		productRepo.deleteProduct(id)
 		const nextSnapshot = productRepo.getLSProducts()

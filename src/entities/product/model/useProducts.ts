@@ -21,6 +21,7 @@ export function useProducts() {
 	return {
 		products: snapshot.products,
 		createProduct: productStore.createProduct,
+		updateProduct: productStore.updateProduct,
 		deleteProduct: productStore.deleteProduct,
 		isLoading,
 		error

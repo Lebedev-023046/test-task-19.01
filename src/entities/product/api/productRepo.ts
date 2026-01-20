@@ -1,4 +1,9 @@
-import type { CreateProductPayload, Product, Products } from './types'
+import type {
+	CreateProductPayload,
+	Product,
+	Products,
+	UpdateProductPayload
+} from './types'
 
 const LS_KEY = 'products'
 
@@ -50,6 +55,16 @@ export const productRepo = {
 		productRepo.setLSProducts(updated)
 
 		return newProduct
+	},
+
+	updateProduct(payload: UpdateProductPayload) {
+		const stored = productRepo.getLSProducts()
+		const updated: Products = {
+			products: stored.products.map(product =>
+				product.id === payload.id ? payload : product
+			)
+		}
+		productRepo.setLSProducts(updated)
 	},
 
 	deleteProduct(id: string): string {
