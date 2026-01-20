@@ -26,7 +26,7 @@ export function useCreateProductForm() {
 			const payload = {
 				...values,
 				price: Number(values.price),
-				image: '/images/product-image.webp'
+				image: '../images/product-image.webp'
 			}
 			createProduct(payload)
 			reset()

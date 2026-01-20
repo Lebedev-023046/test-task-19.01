@@ -5,16 +5,12 @@ interface CreateProductButtonProps extends Pick<
 	'type'
 > {
 	isLoading: boolean
-	children: React.ReactNode
 }
 
-export function CreateProductButton({
-	isLoading,
-	children
-}: CreateProductButtonProps) {
+export function CreateProductButton({ isLoading }: CreateProductButtonProps) {
 	return (
 		<Button disabled={isLoading} type='submit' align='center'>
-			{children}
+			Add Product
 		</Button>
 	)
 }

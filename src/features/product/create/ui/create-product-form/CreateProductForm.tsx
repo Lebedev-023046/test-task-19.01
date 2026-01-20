@@ -1,9 +1,9 @@
 import { InputField } from '@/shared/ui/form-fields/RHF/input-field'
 import { useCreateProductForm } from '../../model/useCreateProductForm'
 import { CreateProductButton } from '../create-product-button'
-import styles from './ProductForm.module.css'
+import styles from './CreateProductForm.module.css'
 
-export function ProductForm() {
+export function CreateProductForm() {
 	const { control, onSubmit } = useCreateProductForm()
 
 	return (
@@ -24,9 +24,7 @@ export function ProductForm() {
 						control={control}
 					/>
 					<InputField name='price' label='Price, $' control={control} />
-					<CreateProductButton isLoading={false} type='submit'>
-						Add Product
-					</CreateProductButton>
+					<CreateProductButton isLoading={false} />
 				</form>
 			</div>
 		</div>
