@@ -1,4 +1,4 @@
-import { useProducts } from '@/entities/product/model/useProducts'
+import { useProducts } from '@/entities/product'
 import { sleep } from '@/shared/utils/sleep'
 import { useState } from 'react'
 import toast from 'react-hot-toast'

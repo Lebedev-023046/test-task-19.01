@@ -1,7 +1,6 @@
-import { InputField } from '@/shared/ui/form-fields/RHF/input-field'
-
-import type { Product } from '@/entities/product/api/types'
+import type { Product } from '@/entities/product'
 import { Button } from '@/shared/ui/button'
+import { InputField } from '@/shared/ui/form-fields/RHF/input-field'
 import { useEditProductForm } from '../../model/useEditProductForm'
 import { EditProductButton } from '../edit-product-button'
 import styles from './EditProductForm.module.css'

@@ -1,4 +1,4 @@
-import { LogoutButton } from '@/features/auth/logout/ui/LogoutButton'
+import { LogoutButton } from '@/features/auth'
 import { Link } from 'react-router-dom'
 import styles from './header.module.css'
 

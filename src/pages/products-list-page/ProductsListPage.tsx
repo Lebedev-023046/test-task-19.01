@@ -1,5 +1,5 @@
-import { useProducts } from '@/entities/product/model/useProducts'
-import { CreateProductForm } from '@/features/product/create/ui/create-product-form'
+import { useProducts } from '@/entities/product'
+import { CreateProductForm } from '@/features/product/create'
 import { ErrorFallback } from '@/shared/ui/error-boundary/fallback'
 import { PageLoader } from '@/shared/ui/page-loader'
 import styles from './ProductsListPage.module.css'

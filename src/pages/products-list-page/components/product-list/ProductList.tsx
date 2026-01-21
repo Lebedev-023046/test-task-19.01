@@ -1,4 +1,4 @@
-import type { Product } from '@/entities/product/api/types'
+import type { Product } from '@/entities/product'
 import { ProductCard } from '../product-card'
 import styles from './ProductList.module.css'
 
