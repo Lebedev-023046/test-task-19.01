@@ -1,4 +1,4 @@
-import { userRepo } from '@/entities/user/api/userRepo'
+import { userRepo } from '@/entities/user'
 import { useAuthStore } from '../model/auth.store'
 
 export function bootstrapAuth() {

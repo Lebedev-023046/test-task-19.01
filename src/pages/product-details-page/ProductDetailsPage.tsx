@@ -1,7 +1,9 @@
-import { useProducts } from '@/entities/product/model/useProducts'
-import { useDeleteProduct } from '@/features/product/delete/model/useDeleteProduct'
-import { DeleteProductButton } from '@/features/product/delete/ui/delete-product-button'
-import { EditProductForm } from '@/features/product/edit/ui/edit-product-form'
+import { useProducts } from '@/entities/product'
+import {
+	DeleteProductButton,
+	useDeleteProduct
+} from '@/features/product/delete'
+import { EditProductForm } from '@/features/product/edit'
 import { ROUTES } from '@/shared/config/routes'
 import { Button } from '@/shared/ui/button'
 import { ErrorFallback } from '@/shared/ui/error-boundary/fallback'

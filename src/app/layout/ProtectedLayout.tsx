@@ -1,4 +1,4 @@
-import { useAuthStore } from '@/features/auth/model/auth.store'
+import { useAuthStore } from '@/features/auth'
 import { ROUTES } from '@/shared/config/routes'
 import { Navigate, Outlet } from 'react-router-dom'
 

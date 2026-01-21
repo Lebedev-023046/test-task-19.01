@@ -1,4 +1,4 @@
-import type { Product } from '@/entities/product/api/types'
+import type { Product } from '@/entities/product'
 import styles from './ProductCard.module.css'
 
 interface ProductCardProps {

@@ -1,6 +1,8 @@
-import type { Product } from '@/entities/product/api/types'
-import { useDeleteProduct } from '@/features/product/delete/model/useDeleteProduct'
-import { DeleteProductButton } from '@/features/product/delete/ui/delete-product-button'
+import type { Product } from '@/entities/product'
+import {
+	DeleteProductButton,
+	useDeleteProduct
+} from '@/features/product/delete'
 import { ROUTES } from '@/shared/config/routes'
 import { Button } from '@/shared/ui/button'
 import { Link } from 'react-router-dom'
